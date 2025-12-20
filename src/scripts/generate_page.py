@@ -82,7 +82,7 @@ def get_config_readme(repo_name):
 gh_instance = Github(auth=Auth.Token(os.environ["GITHUB_TOKEN"]))
 logger.info("authenticated to Github API")
 gh_org = gh_instance.get_organization("MPUSP")
-logger.info("fetching data for organization)
+logger.info("fetching data for organization")
 
 # get members and their stats
 members = {}
