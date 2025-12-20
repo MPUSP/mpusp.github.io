@@ -1,0 +1,38 @@
+import Highlight from '@site/src/components/Extras/Highlight';  
+
+# {{ repo }}
+
+![](https://img.shields.io/github/license/{{ repo }}?style=for-the-badge&label=license&logo=github)
+![](https://img.shields.io/github/issues/{{ repo }}?style=for-the-badge&label=issues&logo=github)
+![](https://img.shields.io/github/stars/{{ repo }}?style=for-the-badge&label=stars&logo=github)
+![](https://img.shields.io/github/watchers/{{ repo }}?style=for-the-badge&label=watchers&logo=github)
+[![](https://img.shields.io/badge/GitHub%20page-blue?style=for-the-badge)](https://github.com/{{ repo }})
+
+{{ description or "Description not available." }}
+
+## Overview
+
+**Testing:** 
+![GitHub Actions Workflow Status](https://img.shields.io/github/actions/workflow/status/{{ repo }}/main.yml?style=for-the-badge)
+![GitHub Actions Workflow Status](https://img.shields.io/github/actions/workflow/status/{{ repo }}/deploy_apptainer.yml?style=for-the-badge)
+
+
+**Last update:** {% if update %}<Highlight color='#adadad'>{{ update }}</Highlight>{% else %}Not available{% endif %}
+
+
+**Latest release:** {% if release %}<Highlight color='#adadad'>{{ release }}</Highlight>{% else %}Not available{% endif %}
+
+
+**Topics:** {% for topic in topics %}<Highlight color='#cb8ac4ff'>{{ topic }}</Highlight> {% endfor %}
+
+
+**Authors:** {% for author in authors %} <Highlight color='#94e9c2ff'>[@{{ author }}](https://github.com/{{ author }})</Highlight> {% endfor %}
+
+
+## Configuration
+
+The following configuration details are extracted from the config's README file.
+
+---
+
+{{ readme or "Configuration details not available." }}

@@ -1,0 +1,52 @@
+/**
+ * CSS files with the .module.css suffix will be treated as CSS modules
+ * and scoped locally.
+ */
+
+.heroBanner {
+  padding: 4rem 0;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  color: #10b981;
+  background: #1f2937;
+}
+
+@media screen and (max-width: 996px) {
+  .heroBanner {
+    padding: 2rem;
+  }
+}
+
+.buttons {
+  display: inline-block;
+  align-items: center;
+  justify-content: center;
+  margin-right: 20px;
+  border-color: #059669;
+}
+
+.horizontal_bar {
+  width: 100%;
+  height: 4px;
+  background: linear-gradient(to right, #059669, #111827, #059669);
+  margin-top: 0px;
+}
+
+.spacing {
+  margin-bottom: 2rem;
+}
+
+[data-theme="light"] {
+  .heroBanner {
+    color: #059669;
+    background: #e3ebe8;
+  }
+  .horizontal_bar {
+    background: linear-gradient(to right, #29d5b0, #e3ebe8, #29d5b0);
+  }
+  .buttons {
+    border: 2px solid #059669;
+    border-radius: 8px;
+  }
+}

@@ -1,0 +1,41 @@
+---
+sidebar_position: 1
+title: Workflow overview
+---
+
+import Link from "@docusaurus/Link";
+import styles from "@site/src/pages/index.module.css";
+import WfCard from "@site/src/components/Extras/WfCard";
+import workflows from "@site/static/data/workflows.json";
+
+export const columnCount = 3;
+export const chunkSize = Math.ceil(workflows.length / columnCount);
+export const columns = Array.from({ length: columnCount }, (_, index) =>
+  workflows.slice(index * chunkSize, index * chunkSize + chunkSize)
+).filter((column) => column.length);
+
+# Workflow overview
+
+Our workflows, sorted by number of stars.
+
+<Columns>
+  {columns.map((column, columnIndex) => (
+    <Column key={`column-${columnIndex}`} className="text--left">
+      {column.map((workflow, workflowIndex) => (
+        <div key={workflow.repo}>
+          <WfCard
+            update={workflow.update}
+            description={workflow.description}
+            bgValue={workflow.bg_value ?? 0.5}
+            authors={workflow.authors}
+          >
+            {workflow.repo}
+          </WfCard>
+          {workflowIndex < column.length - 1 && (
+            <div className={styles.spacing}></div>
+          )}
+        </div>
+      ))}
+    </Column>
+  ))}
+</Columns>
