@@ -80,9 +80,9 @@ def get_config_readme(repo_name):
 # ----------------------------
 # query information from github about the organization
 gh_instance = Github(auth=Auth.Token(os.environ["GITHUB_TOKEN"]))
-logger.info("authenticated to Github as %s", gh_instance.get_user().login)
+logger.info("authenticated to Github API")
 gh_org = gh_instance.get_organization("MPUSP")
-logger.info("fetching data for organization %s", gh_org.login)
+logger.info("fetching data for organization)
 
 # get members and their stats
 members = {}
