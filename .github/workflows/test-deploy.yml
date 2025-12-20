@@ -8,9 +8,7 @@ jobs:
   generate-page:
     runs-on: ubuntu-latest
     permissions:
-      members: read
       contents: read
-      metadata: read
     steps:
       - uses: actions/checkout@v6
 
