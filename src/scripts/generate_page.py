@@ -29,6 +29,15 @@ def get_total_commits(repo):
     return counts
 
 
+def get_total_deployments(repo):
+    """Get total deployments in a repository."""
+    try:
+        counts = repo.get_deployments().totalCount
+    except:
+        counts = 0
+    return counts
+
+
 def get_commit_history(repo):
     """Get commit history for a repository."""
     total = get_total_commits(repo)
@@ -80,9 +89,9 @@ def get_config_readme(repo_name):
 # ----------------------------
 # query information from github about the organization
 gh_instance = Github(auth=Auth.Token(os.environ["GITHUB_TOKEN"]))
-logger.info("authenticated to Github as %s", gh_instance.get_user().login)
+logger.info("authenticated to Github API")
 gh_org = gh_instance.get_organization("MPUSP")
-logger.info("fetching data for organization %s", gh_org.login)
+logger.info("fetching data for organization")
 
 # get members and their stats
 members = {}
@@ -123,7 +132,7 @@ for repo in gh_org.get_repos():
             else None
         ),
         "contributors": repo.get_contributors().totalCount,
-        "deployments": repo.get_deployments().totalCount,
+        "deployments": get_total_deployments(repo),
         "downloads": sum(
             asset.download_count
             for release in repo.get_releases()
