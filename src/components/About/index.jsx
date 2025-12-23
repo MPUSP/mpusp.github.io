@@ -47,16 +47,15 @@ export default function Stats() {
             <div className={styles.about_description}>
                 <h1>Our Github Projects</h1>
                 <p>
-                    More than 30 open-source{" "}
-                    <Link to="https://github.com/MPUSP/repositories">MPUSP repositories</Link>{" "}
-                    are available on Github, representing a diverse range of projects.
+                    We work on a diverse range of projects and aim to make as many as possible{" "}
+                    <Link to="https://github.com/orgs/MPUSP/repositories">publicly available on Github</Link>{" "}.
                 </p>
             </div>
             <div className={styles.stats_container}>
                 <div className={styles.stats1_card}>
                     {stats.map(({ number, content }, index) => (
                         <Link key={index}
-                            to="https://github.com/MPUSP/repositories">
+                            to="https://github.com/orgs/MPUSP/repositories">
                             <div className={styles.card}>
                                 <h1 className="gradient_text">{number}</h1>
                                 <h3>{content}</h3>
@@ -67,7 +66,7 @@ export default function Stats() {
                 <div className={styles.stats2_card}>
                     {stats2.map(({ number, content }, index) => (
                         <Link key={index}
-                            to="https://github.com/MPUSP/repositories">
+                            to="https://github.com/orgs/MPUSP/repositories">
                             <div className={styles.card}>
                                 <h1 className="gradient_text">{number}</h1>
                                 <h3>{content}</h3>

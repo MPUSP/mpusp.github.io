@@ -17,21 +17,24 @@ export default function Header() {
             </div>
             <div className={styles.header_content}>
                 <h1>
-                    The MPUSP Bioinformatics Platform:
-                    Workflows for Reproducible Science.
+                    The MPUSP Bioinformatics Platform
                 </h1>
+                <h2>
+                    Workflows for Computational Biology at the 
+                    Max-Planck-Unit for the Science of Pathogens.
+                </h2>
                 <div className={styles.header_content_input}>
                     <Link to="/docs/projects/intro"
-                        className="button button--secondary button--lg">
-                        Projects
+                        className="button">
+                        <span>Projects</span>
                     </Link>
                     <Link to="/docs/workflows/workflow_overview"
-                        className="button button--secondary button--lg">
-                        Explore workflows
+                        className="button">
+                        <span>Explore workflows</span>
                     </Link>
                     <Link to="/blog"
-                        className="button button--secondary button--lg">
-                        News
+                        className="button">
+                        <span>News</span>
                     </Link>
                 </div>
             </div>
