@@ -81,6 +81,11 @@ const config = {
           },
           { to: "/blog", label: "News", position: "left" },
           {
+            href: "https://mpusp.mpg.de",
+            label: "MPUSP",
+            position: "right",
+          },
+          {
             href: "https://github.com/MPUSP",
             label: "MPUSP GitHub",
             position: "right",
@@ -138,7 +143,7 @@ const config = {
         darkTheme: prismThemes.dracula,
       },
       colorMode: {
-        defaultMode: "dark",
+        defaultMode: "light",
         disableSwitch: false,
         respectPrefersColorScheme: false,
       },
