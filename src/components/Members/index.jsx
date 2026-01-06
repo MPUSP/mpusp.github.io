@@ -4,7 +4,7 @@ import styles from "./styles.module.css";
 import statsJson from "@site/static/data/member_stats.json";
 
 const statsKeys = [
-  { label: "Public repos", key: "public_repos", symbol: " 📦" },
+  { label: "MPUSP repos", key: "mpusp_repos", symbol: " 📦" },
   { label: "Followers", key: "followers", symbol: " 👥" },
   { label: "Starred", key: "starred", symbol: " ⭐" },
   { label: "Watched", key: "watched", symbol: " 👁️" },

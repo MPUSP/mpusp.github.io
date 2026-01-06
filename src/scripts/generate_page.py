@@ -131,7 +131,9 @@ for repo in gh_org.get_repos():
             if repo.get_releases().totalCount > 0
             else None
         ),
-        "contributors": repo.get_contributors().totalCount,
+        "contributors": [
+            i.login for i in repo.get_contributors() if not i.login.endswith("[bot]")
+        ],
         "deployments": get_total_deployments(repo),
         "downloads": sum(
             asset.download_count
@@ -165,11 +167,7 @@ for repo in gh_org.get_repos():
                 ),
                 "topics": repo.get_topics(),
                 "readme": get_config_readme(repo.full_name),
-                "authors": [
-                    i.login
-                    for i in repo.get_contributors()
-                    if not i.login.endswith("[bot]")
-                ],
+                "authors": repos[repo.name]["contributors"],
                 "bg_value": round(
                     int(hashlib.md5(repo.name.encode()).hexdigest()[:6], 16)
                     % 360
@@ -179,7 +177,13 @@ for repo in gh_org.get_repos():
             }
         )
 
+# add count of repos a member contributed to
+for member in members:
+    member["mpusp_repos"] = sum(
+        1 for repo in repos.values() if member["github_name"] in repo["contributors"]
+    )
 
+# logging
 logger.info("collected stats for %s repositories", len(repos))
 
 # create summary data for org
