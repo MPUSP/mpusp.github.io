@@ -3,7 +3,7 @@
 [![Deploy to GitHub Pages](https://github.com/MPUSP/mpusp.github.io/actions/workflows/deploy.yml/badge.svg)](https://github.com/MPUSP/mpusp.github.io/actions/workflows/deploy.yml)
 [![GitHub last commit](https://img.shields.io/github/last-commit/MPUSP/mpusp-github-io)](https://github.com/MPUSP/mpusp.github.io/actions/workflows/deploy.yml)
 
-A homepage for the bioionformatic platform of the Max-Planck-Unit for the Science of Pathogens ([MPUSP](mpusp.mpg.de)).
+A homepage for the bioinformatic platform of the Max-Planck-Unit for the Science of Pathogens ([MPUSP](mpusp.mpg.de)).
 This website is built using [Docusaurus](https://docusaurus.io/), a modern static website generator.
 All data to render the less-static parts of the website (repo and user stats) are retrieved from Github using API requests.
 The website is automatically updated and built once per week, and on pull requests to the `main` branch.
@@ -50,3 +50,13 @@ npm run build
 ```
 
 This command generates static content into the `build` directory and can be served using any static contents hosting service.
+
+### References
+
+This page is loosely inspired by the [`conda-forge` homepage](https://conda-forge.org/), which is also built with Docusaurus and [hosted on Github](https://github.com/conda-forge/conda-forge.github.io):
+
+> conda-forge community. (2015). The conda-forge Project: Community-based Software Distribution Built on the conda Package Format and Ecosystem [Computer software]. https://doi.org/10.5281/zenodo.4774216
+
+Some functionality and design choices were inspired by the [Snakemake Workflow Catalog](https://snakemake.github.io/snakemake-workflow-catalog/), which is co-maintained by Michael Jahn ([jahn@mpusp.mpg.de](https://github.com/m-jahn))
+
+> Koester, J., & Jahn, M. (2025). Snakemake Workflow Catalog (Version 1.0.0) [Computer software]. https://github.com/snakemake/snakemake-workflow-catalog
