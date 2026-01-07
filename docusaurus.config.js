@@ -118,7 +118,7 @@ const config = {
               },
               {
                 label: "MPUSP Home Page",
-                href: "https://mpusp.mpg.de",
+                href: "https://www.mpusp.mpg.de",
               },
             ],
           },

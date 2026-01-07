@@ -1,4 +1,4 @@
-documentation:
-  label: documentation
-  permalink: /documentation
-  description: Documentation of workflows
+announcements:
+  label: announcements
+  permalink: /announcements
+  description: Announcements and updates about MPUSP
