@@ -19,7 +19,7 @@ Our main objective is the support of all members of MPUSP as well as our collabo
 ## Core competences
 
 - Data acquisition: study and experimental design, analysis strategies, data transfer and stoprage
-- Data quality control (QC): We provide our institute and the public with a range of [data processing workflows](/workflows), all of them featuring rich quality control (QC) functions
+- Data quality control (QC): We provide our institute and the public with a range of [data processing workflows](/docs/workflows/workflow_overview), all of them featuring rich quality control (QC) functions
 - Data analysis and visualization: One of our most important tasks; We handle primarily short and long read sequencing data for all types of genomics and transcriptomics. Many of our workflows are specially suited for microbial data.
 - Data deposition and sharing: We strive to annotate and deposit all relevant biological data on free and publicly accessible platforms, such as ENA (European Nucleotide Archive) or NCBI's SRA service.
 - Reproducible workflows: We deposit all of our scientific tools and workflows on (https://github.com/MPUSP), with a growing number of repositories being public and freely available under the MIT license.

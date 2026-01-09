@@ -3,7 +3,7 @@
 [![Deploy to GitHub Pages](https://github.com/MPUSP/mpusp.github.io/actions/workflows/deploy.yml/badge.svg)](https://github.com/MPUSP/mpusp.github.io/actions/workflows/deploy.yml)
 [![GitHub last commit](https://img.shields.io/github/last-commit/MPUSP/mpusp-github-io)](https://github.com/MPUSP/mpusp.github.io/actions/workflows/deploy.yml)
 
-A homepage for the bioinformatic platform of the Max-Planck-Unit for the Science of Pathogens ([MPUSP](mpusp.mpg.de)).
+A homepage for the bioinformatic platform of the Max-Planck-Unit for the Science of Pathogens ([MPUSP](www.mpusp.mpg.de)).
 This website is built using [Docusaurus](https://docusaurus.io/), a modern static website generator.
 All data to render the less-static parts of the website (repo and user stats) are retrieved from Github using API requests.
 The website is automatically updated and built once per week, and on pull requests to the `main` branch.
