@@ -81,7 +81,7 @@ const config = {
           },
           { to: "/blog", label: "News", position: "left" },
           {
-            href: "https://mpusp.mpg.de",
+            href: "https://www.mpusp.mpg.de",
             label: "MPUSP",
             position: "right",
           },

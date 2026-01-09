@@ -1,5 +1,7 @@
 ---
-sidebar_position: 1
+sidebar_position: 2
 ---
 
-# Small ORFs
+# Project 2
+
+This is a place holder. More information coming soon!
