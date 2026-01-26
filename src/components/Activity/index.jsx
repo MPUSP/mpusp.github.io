@@ -99,7 +99,7 @@ export default function Activity() {
       <footer className={styles.activity_footer}>
         <p>
           Statistics are automatically retrieved from GitHub.
-          Last updates can be viewed on <Link to="https://github.com/MPUSP/mpusp.github.io/actions">Deployment history</Link>.
+          Last update on {new Date().toLocaleDateString()} (<Link to="https://github.com/MPUSP/mpusp.github.io/actions">Deployment history</Link>).
         </p>
       </footer>
     </section>

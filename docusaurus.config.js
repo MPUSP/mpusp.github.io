@@ -107,6 +107,10 @@ const config = {
                 label: "Documentation",
                 to: "/docs/projects/intro",
               },
+              {
+                label: `Last update: ${new Date().toLocaleDateString()}`,
+                to: "https://github.com/MPUSP/mpusp.github.io/actions",
+              },
             ],
           },
           {
@@ -145,7 +149,7 @@ const config = {
       colorMode: {
         defaultMode: "light",
         disableSwitch: false,
-        respectPrefersColorScheme: false,
+        respectPrefersColorScheme: true,
       },
     }),
 };
