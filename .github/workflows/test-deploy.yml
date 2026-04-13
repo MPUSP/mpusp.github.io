@@ -12,20 +12,14 @@ jobs:
     steps:
       - uses: actions/checkout@v6
 
-      - name: Setup conda
-        uses: conda-incubator/setup-miniconda@v3
+      - uses: prefix-dev/setup-pixi@v0
         with:
-          channels: conda-forge
-          environment-file: environment.yaml
-          miniforge-version: latest
+          cache: true
 
       - name: Generate page
-        shell: bash -l {0}
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: |
-          python src/scripts/generate_page.py
-          python src/scripts/generate_workflow_md.py
+        run: pixi run generate-page
 
       - name: Upload page data
         uses: actions/upload-artifact@v4

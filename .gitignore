@@ -20,3 +20,6 @@ docs/workflows/all_workflows/*.md
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+# pixi environments
+.pixi/*
+!.pixi/config.toml
