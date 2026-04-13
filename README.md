@@ -1,7 +1,7 @@
 # mpusp.github.io
 
 [![Deploy to GitHub Pages](https://github.com/MPUSP/mpusp.github.io/actions/workflows/deploy.yml/badge.svg)](https://github.com/MPUSP/mpusp.github.io/actions/workflows/deploy.yml)
-[![GitHub last commit](https://img.shields.io/github/last-commit/MPUSP/mpusp-github-io)](https://github.com/MPUSP/mpusp.github.io/actions/workflows/deploy.yml)
+[![GitHub last commit](https://img.shields.io/github/last-commit/MPUSP/mpusp.github.io)](https://github.com/MPUSP/mpusp.github.io/commits/main)
 
 A homepage for the bioinformatic platform of the Max-Planck-Unit for the Science of Pathogens ([MPUSP](www.mpusp.mpg.de)).
 This website is built using [Docusaurus](https://docusaurus.io/), a modern static website generator.
@@ -22,17 +22,16 @@ The website is automatically updated and built once per week, and on pull reques
 
 ### Dependencies
 
-To develop the page locally, create a conda environment with the required packages:
+To develop the page locally, use [pixi](https://pixi.prefix.dev) to set up the local environment from the `pixi.toml` file:
 
 ```bash
-conda create -n docusaurus -c conda-forge python pygithub jinja2 nodejs
-conda activate docusaurus
+pixi shell
 ```
 
-To create a test page, run:
+The `pixi.toml` file has predefined tasks to fetch data and generate content for the website:
 
 ```bash
-npm create-docusaurus@latest docusaurus-test classic
+pixi run generate-page
 ```
 
 ### Local Development

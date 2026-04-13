@@ -1,0 +1,15 @@
+[workspace]
+authors = ["m-jahn <jahn@mpusp.mpg.de>"]
+channels = ["conda-forge", "bioconda"]
+name = "mpusp.github.io"
+platforms = ["linux-64"]
+version = "0.1.0"
+
+[tasks]
+generate-page = {cmd = "python src/scripts/generate_page.py; python src/scripts/generate_workflow_md.py"}
+
+[dependencies]
+python = ">=3.14.4,<3.15"
+pygithub = ">=2.9.0,<3"
+jinja2 = ">=3.1.6,<4"
+nodejs = ">=25.8.2,<25.9"
