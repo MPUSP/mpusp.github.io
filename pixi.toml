@@ -7,6 +7,8 @@ version = "0.1.0"
 
 [tasks]
 generate-page = {cmd = "python src/scripts/generate_page.py; python src/scripts/generate_workflow_md.py"}
+test-deploy = {cmd = "npm start"}
+test-build = {cmd = "npm run build"}
 
 [dependencies]
 python = ">=3.14.4,<3.15"
